@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!--
+  ~ Limesharp_Import extension
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the MIT License
+  ~ that is bundled with this package in the file LICENSE
+  ~ It is also available through the world-wide-web at this URL:
+  ~ http://opensource.org/licenses/mit-license.php
+  ~
+  ~ @category  Limesharp
+  ~ @package   Limesharp_Import
+  ~ @copyright 2016 Limesharp
+  ~ @license   http://opensource.org/licenses/mit-license.php MIT License
+  ~ @author    Claudiu Creanga
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <body>
+        <referenceBlock name="menu">
+            <action method="setActive">
+                <argument name="itemId" xsi:type="string">Limesharp_Import::products_files</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="page.import">
+            <action method="setImportClass">
+                <argument name="class" xsi:type="string">complex</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <uiComponent name="limesharp_import_products_listing"/>
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!--
+  ~ Limesharp_Import extension
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the MIT License
+  ~ that is bundled with this package in the file LICENSE
+  ~ It is also available through the world-wide-web at this URL:
+  ~ http://opensource.org/licenses/mit-license.php
+  ~
+  ~ @category  Limesharp
+  ~ @package   Limesharp_Import
+  ~ @copyright 2016 Limesharp
+  ~ @license   http://opensource.org/licenses/mit-license.php MIT License
+  ~ @author    Claudiu Creanga
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Limesharp\Import\Logger\Handler">
+        <arguments>
+            <argument name="filesystem" xsi:type="object">Magento\Framework\Filesystem\Driver\File</argument>
+        </arguments>
+    </type>
+    <type name="Limesharp\Import\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">importIntegration</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">Limesharp\Import\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="limesharp_import_products_listing_data_source" xsi:type="string">Limesharp\Import\Model\ResourceModel\Products\Grid\Collection</item>
+                <item name="limesharp_import_stock_listing_data_source" xsi:type="string">Limesharp\Import\Model\ResourceModel\Stock\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Limesharp\Import\Model\ResourceModel\Products\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">limesharp_import_integration_products</argument>
+            <argument name="eventPrefix" xsi:type="string">limesharp_import_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">limesharp_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Limesharp\Import\Model\ResourceModel\Products</argument>
+        </arguments>
+    </type>
+    <type name="Limesharp\Import\Model\ResourceModel\Stock\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">limesharp_import_integration_stock</argument>
+            <argument name="eventPrefix" xsi:type="string">limesharp_import_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">limesharp_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Limesharp\Import\Model\ResourceModel\Stock</argument>
+        </arguments>
+    </type>
+    <virtualType name="LimesharpImportUiDataProviderStoresFormModifierPool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="stores_data" xsi:type="array">
+                    <item name="class" xsi:type="string">Limesharp\Import\Ui\DataProvider\Import\Form\Modifier\ImportData</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Limesharp\Import\Model\Import\DataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">LimesharpImportUiDataProviderStoresFormModifierPool</argument>
+        </arguments>
+    </type>
+    <virtualType name="LimesharpImportProductsFileUploader" type="Limesharp\Import\Model\Uploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="const">Limesharp\Import\Model\Uploader::FILE_TMP_PATH</argument>
+            <argument name="basePath" xsi:type="const">Limesharp\Import\Model\Uploader::FILE_PATH</argument>
+            <argument name="allowedExtensions" xsi:type="array" />
+        </arguments>
+    </virtualType>
+    <type name="Limesharp\Import\Controller\Adminhtml\Products\File\Upload">
+        <arguments>
+            <argument name="uploader" xsi:type="object">LimesharpImportProductsFileUploader</argument>
+        </arguments>
+    </type>
+</config>

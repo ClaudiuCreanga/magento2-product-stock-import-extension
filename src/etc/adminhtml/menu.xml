@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Limesharp_Import extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category  Limesharp
+ * @package   Limesharp_Import
+ * @copyright 2016 Claudiu Creanga
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ * @author    Claudiu Creanga
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Limesharp_Import"
+                import="Import Integration"
+                module="Limesharp_Import"
+                sortOrder="9999"
+                resource="Magento_Backend::content"
+        />
+        <add id="Limesharp_Import::products_files"
+                import="Products"
+                module="Limesharp_Import"
+                sortOrder="9999"
+                resource="Magento_Backend::content"
+                parent="Limesharp_Import"
+                action="importintegration/products"
+        />
+        <add id="Limesharp_Import::stock_files"
+                import="Stock"
+                module="Limesharp_Import"
+                sortOrder="9999"
+                resource="Magento_Backend::content"
+                parent="Limesharp_Import"
+                action="importintegration/stock"
+        />
+        <add id="Limesharp_Import::import"
+                import="Import manually"
+                module="Limesharp_Import"
+                sortOrder="9999"
+                resource="Magento_Backend::content"
+                parent="Limesharp_Import"
+                action="importintegration/products/import"
+        />
+    </menu>
+</config>

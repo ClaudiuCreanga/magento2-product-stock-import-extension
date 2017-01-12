@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+  ~ Limesharp_Import extension
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the MIT License
+  ~ that is bundled with this package in the file LICENSE
+  ~ It is also available through the world-wide-web at this URL:
+  ~ http://opensource.org/licenses/mit-license.php
+  ~
+  ~ @category  Limesharp
+  ~ @package   Limesharp_Import
+  ~ @copyright 2016 Limesharp
+  ~ @license   http://opensource.org/licenses/mit-license.php MIT License
+  ~ @author    Claudiu Creanga
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <limesharp_import>
+            <import_general>
+                <status>0</status>
+                <email_alerts>0</email_alerts>
+                <email_addresses>claudiu@limesharp.net</email_addresses>
+            </import_general>
+            <import_products>
+                <timeout>1440</timeout>
+                <last_time>0</last_time>
+                <email_time>2880</email_time>
+            </import_products>
+            <import_stock>
+                <timeout>360</timeout>
+                <last_time>0</last_time>
+                <email_time>720</email_time>
+            </import_stock>
+        </limesharp_import>
+    </default>
+</config>

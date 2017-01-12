@@ -1,0 +1,30 @@
+<!--
+  ~ Limesharp_Import extension
+  ~
+  ~ NOTICE OF LICENSE
+  ~
+  ~ This source file is subject to the MIT License
+  ~ that is bundled with this package in the file LICENSE
+  ~ It is also available through the world-wide-web at this URL:
+  ~ http://opensource.org/licenses/mit-license.php
+  ~
+  ~ @category  Limesharp
+  ~ @package   Limesharp_Import
+  ~ @copyright 2016 Limesharp
+  ~ @license   http://opensource.org/licenses/mit-license.php MIT License
+  ~ @author    Claudiu Creanga
+  -->
+<div class="file-uploader-summary">
+    <a attr="href: $parent.getFilePreview($file)" target="_blank" text="$file.name"></a>
+    <div class="actions">
+        <button
+                type="button"
+                class="action-remove"
+                data-role="delete-button"
+                attr="import: $t('Delete file')"
+                click="$parent.removeFile.bind($parent, $file)">
+            <span translate="'Delete file'"/>
+        </button>
+    </div>
+    <div class="file-uploader-filename" />
+</div>

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Limesharp_Import extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category  Limesharp
+ * @package   Limesharp_Import
+ * @copyright 2016 Claudiu Creanga
+ * @license   http://opensource.org/licenses/mit-license.php MIT License
+ * @author    Claudiu Creanga
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="limesharp_import" sortOrder="2000">
+            <label>Import integration</label>
+        </tab>
+        <section id="limesharp_import" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Import integration</label>
+            <tab>limesharp_import</tab>
+            <resource>Limesharp_Import::stores</resource>
+            <group id="import_general" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="status" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="email_alerts" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable email alerts</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="email_addresses" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email addresses</label>
+                    <comment>
+                        <![CDATA[Separate multiple emails via a comma.]]>
+                    </comment>
+                </field>
+            </group>
+            <group id="import_products" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Products</label>
+                <field id="timeout" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Maximum processing time</label>
+                    <comment>
+                        <![CDATA[Value in minutes. Time that has to pass before we can say that the file product import has timed out and we need to do it again.]]>
+                    </comment>
+                </field>
+                <field id="last_time" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Last time the product file has run</label>
+                    <comment>
+                        <![CDATA[Please do not change this value.]]>
+                    </comment>
+                </field>
+                <field id="email_time" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Time to pass before sending emails for products</label>
+                    <comment>
+                        <![CDATA[Value in minutes. For example if the product file hasn't run in 200 minutes, send an email alerting about the issue.]]>
+                    </comment>
+                </field>
+            </group>
+            <group id="import_stock" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Stock</label>
+                <field id="timeout" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Maximum processing time</label>
+                    <comment>
+                        <![CDATA[Value in minutes. Time that has to passe before we can say that the file stock import has timed out and we need to do it again.]]>
+                    </comment>
+                </field>
+                <field id="last_time" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Last time the stock file has run</label>
+                    <comment>
+                        <![CDATA[Please do not change this value.]]>
+                    </comment>
+                </field>
+                <field id="email_time" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Time to pass before sending emails for stock</label>
+                    <comment>
+                        <![CDATA[Value in minutes. For example if the stock file hasn't run in 200 minutes, send an email alerting about the issue.]]>
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
