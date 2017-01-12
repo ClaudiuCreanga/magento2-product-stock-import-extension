@@ -19,9 +19,9 @@
     <default>
         <limesharp_import>
             <import_general>
-                <status>0</status>
+                <status>1</status>
                 <email_alerts>0</email_alerts>
-                <email_addresses>claudiu@limesharp.net</email_addresses>
+                <email_addresses>example@example.net</email_addresses>
             </import_general>
             <import_products>
                 <timeout>1440</timeout>
