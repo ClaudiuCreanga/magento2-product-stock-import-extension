@@ -1,5 +1,5 @@
 {
-  "name": "limesharp/import",
+  "name": "claudiucreanga/import",
   "description": "Magento2 extension that imports products and stock from a file via a cron (the import can be done manually too)",
   "type": "magento2-module",
   "version": "1.0.0",
@@ -21,7 +21,7 @@
   "autoload": {
     "files": [ "src/registration.php" ],
     "psr-4": {
-      "Limesharp\\Import\\": "src/"
+      "Claudiucreanga\\Import\\": "src/"
     }
   }
 }

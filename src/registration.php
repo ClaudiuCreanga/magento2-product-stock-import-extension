@@ -1,6 +1,6 @@
 <?php
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Limesharp_Import',
+    'Claudiucreanga_Import',
     __DIR__
 );

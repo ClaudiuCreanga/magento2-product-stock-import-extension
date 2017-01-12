@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,27 +9,27 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Cron\Stock;
+namespace Claudiucreanga\Import\Cron\Stock;
 
-use Limesharp\Import\Cron\Paths;
-use Limesharp\Import\Cron\FieldsHeader;
-use Limesharp\Import\Cron\Stock\ProcessStockSave;
-use Limesharp\Import\Logger\Logger;
-use Limesharp\Import\Cron\AbstractCron;
+use Claudiucreanga\Import\Cron\Paths;
+use Claudiucreanga\Import\Cron\FieldsHeader;
+use Claudiucreanga\Import\Cron\Stock\ProcessStockSave;
+use Claudiucreanga\Import\Logger\Logger;
+use Claudiucreanga\Import\Cron\AbstractCron;
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Model\ResourceModel\Config;
-use Limesharp\Import\Model\StockFactory as FileFactory;
+use Claudiucreanga\Import\Model\StockFactory as FileFactory;
 
 /**
  * Class Stock
- * @package Limesharp\Import\Cron\Stock
+ * @package Claudiucreanga\Import\Cron\Stock
  */
 class Stock extends AbstractCron
 {
@@ -50,11 +50,11 @@ class Stock extends AbstractCron
     public $processingFiles;
 
     /**
-     * @var \Limesharp\Import\Cron\Stock\ProcessStockDatabase
+     * @var \Claudiucreanga\Import\Cron\Stock\ProcessStockDatabase
      */
     public $processStockDatabase;
     /**
-     * @var \Limesharp\Import\Cron\Stock\ProcessStockSave
+     * @var \Claudiucreanga\Import\Cron\Stock\ProcessStockSave
      */
     public $processStockSave;
 
@@ -73,7 +73,7 @@ class Stock extends AbstractCron
      * @param Context $context
      * @param Logger $logger
      * @param Paths $paths
-     * @param \Limesharp\Import\Cron\Stock\ProcessStockSave $processStockSave
+     * @param \Claudiucreanga\Import\Cron\Stock\ProcessStockSave $processStockSave
      * @param Config $resourceConfig
      * @param FileFactory $fileFactory
      * @param array $data

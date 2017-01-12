@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,28 +9,28 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 declare(strict_types=1);
 
-namespace Limesharp\Import\Cron\Products;
+namespace Claudiucreanga\Import\Cron\Products;
 
-use Limesharp\Import\Cron\Paths;
-use Limesharp\Import\Cron\FieldsHeader;
-use Limesharp\Import\Cron\Products\ProcessProducts;
-use Limesharp\Import\Logger\Logger;
-use Limesharp\Import\Cron\AbstractCron;
+use Claudiucreanga\Import\Cron\Paths;
+use Claudiucreanga\Import\Cron\FieldsHeader;
+use Claudiucreanga\Import\Cron\Products\ProcessProducts;
+use Claudiucreanga\Import\Logger\Logger;
+use Claudiucreanga\Import\Cron\AbstractCron;
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Model\ResourceModel\Config;
-use Limesharp\Import\Model\ProductsFactory as FileFactory;
+use Claudiucreanga\Import\Model\ProductsFactory as FileFactory;
 
 /**
  * Class Products
- * @package Limesharp\Import\Cron
+ * @package Claudiucreanga\Import\Cron
  */
 class Products extends AbstractCron
 {
@@ -56,7 +56,7 @@ class Products extends AbstractCron
     public $processingFiles;
 
     /**
-     * @var \Limesharp\Import\Cron\Products\ProcessProducts
+     * @var \Claudiucreanga\Import\Cron\Products\ProcessProducts
      */
     public $processProducts;
 
@@ -76,7 +76,7 @@ class Products extends AbstractCron
      * @param Logger $logger
      * @param Paths $paths
      * @param FieldsHeader $fieldsHeader
-     * @param \Limesharp\Import\Cron\Products\ProcessProducts $processProducts
+     * @param \Claudiucreanga\Import\Cron\Products\ProcessProducts $processProducts
      * @param Config $resourceConfig
      * @param FileFactory $fileFactory
      * @param array $data

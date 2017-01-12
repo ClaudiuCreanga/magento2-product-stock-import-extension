@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,15 +10,15 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
-namespace Limesharp\Import\Controller\Adminhtml\Stock;
+namespace Claudiucreanga\Import\Controller\Adminhtml\Stock;
 
-use Limesharp\Import\Controller\Adminhtml\AbstractImportIntegration;
+use Claudiucreanga\Import\Controller\Adminhtml\AbstractImportIntegration;
 
 class Index extends AbstractImportIntegration
 {
@@ -31,7 +31,7 @@ class Index extends AbstractImportIntegration
 	{
 		/** @var \Magento\Backend\Model\View\Result\Page $resultPage */
 		$resultPage = $this->resultPageFactory->create();
-		$resultPage->setActiveMenu('Limesharp_Import::stock_files');
+		$resultPage->setActiveMenu('Claudiucreanga_Import::stock_files');
 		$resultPage->getConfig()->getImport()->prepend(__('Stock files that run'));
 		$resultPage->addBreadcrumb(__('Import Integration'), __('Import Integration'));
 		return $resultPage;

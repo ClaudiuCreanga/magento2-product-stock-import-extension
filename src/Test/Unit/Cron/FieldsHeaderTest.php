@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,20 +9,20 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Test\Unit\Model;
+namespace Claudiucreanga\Import\Test\Unit\Model;
 
-use Limesharp\Import\Cron\FieldsHeader;
+use Claudiucreanga\Import\Cron\FieldsHeader;
 
 /**
  * Class FieldsHeaderTest
- * @package Limesharp\Import\Test\Unit\Model
+ * @package Claudiucreanga\Import\Test\Unit\Model
  */
 class FieldsHeaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -41,7 +41,7 @@ class FieldsHeaderTest extends \PHPUnit_Framework_TestCase
 
     /**
      *
-     * @test Limesharp\Import\Cron\FieldsHeader::getFieldsHeaderTest()
+     * @test Claudiucreanga\Import\Cron\FieldsHeader::getFieldsHeaderTest()
      */
     public function getFieldsHeaderTest()
     {

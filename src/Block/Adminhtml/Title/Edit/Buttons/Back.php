@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,16 +9,16 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
 declare(strict_types=1);
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -27,13 +27,13 @@ declare(strict_types=1);
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
  * @copyright 2016 Claudiu Creanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
-namespace Limesharp\Import\Block\Adminhtml\Import\Edit\Buttons;
+namespace Claudiucreanga\Import\Block\Adminhtml\Import\Edit\Buttons;
 
 use Magento\Framework\View\Element\UiComponent\Control\ButtonProviderInterface;
 

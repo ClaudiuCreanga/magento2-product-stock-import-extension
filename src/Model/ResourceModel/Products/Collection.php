@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,14 +10,14 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Model\ResourceModel\Products;
+namespace Claudiucreanga\Import\Model\ResourceModel\Products;
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
 class Collection extends AbstractCollection
@@ -33,8 +33,8 @@ class Collection extends AbstractCollection
 		\Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
 	) {
 		$this->_init(
-			'Limesharp\Import\Model\Products',
-			'Limesharp\Import\Model\ResourceModel\Products'
+			'Claudiucreanga\Import\Model\Products',
+			'Claudiucreanga\Import\Model\ResourceModel\Products'
 		);
 		parent::__construct(
 			$entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource

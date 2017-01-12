@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,26 +9,26 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Controller\Adminhtml\Products;
+namespace Claudiucreanga\Import\Controller\Adminhtml\Products;
 
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Controller\ResultFactory;
-use Limesharp\Import\Model\Uploader;
+use Claudiucreanga\Import\Model\Uploader;
 
 class Upload extends Action
 {
     /**
      * @var string
      */
-    const ACTION_RESOURCE = 'Limesharp_Import::importintegration';
+    const ACTION_RESOURCE = 'Claudiucreanga_Import::importintegration';
     /**
      * uploader
      *

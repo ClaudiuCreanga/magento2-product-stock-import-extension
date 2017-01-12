@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,25 +10,25 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Controller\Adminhtml;
+namespace Claudiucreanga\Import\Controller\Adminhtml;
 
 use Magento\Framework\View\Result\PageFactory;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\Registry;
-use Limesharp\Import\Cron\Paths;
-use Limesharp\Import\Cron\Products\Products;
+use Claudiucreanga\Import\Cron\Paths;
+use Claudiucreanga\Import\Cron\Products\Products;
 
 /**
  * Class AbstractImportIntegration
- * @package Limesharp\Import\Controller\Adminhtml
+ * @package Claudiucreanga\Import\Controller\Adminhtml
  */
 abstract class AbstractImportIntegration extends Action
 {

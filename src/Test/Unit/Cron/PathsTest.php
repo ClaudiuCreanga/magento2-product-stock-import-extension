@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,17 +9,17 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Test\Unit\Model;
+namespace Claudiucreanga\Import\Test\Unit\Model;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
-use Limesharp\Import\Cron\Paths;
+use Claudiucreanga\Import\Cron\Paths;
 
 class PathsTest extends \PHPUnit_Framework_TestCase
 {
@@ -54,7 +54,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
 	const PROCESSED_DIRECTORY_STOCK = "stock_processed";
     
     /**
-     * @var \Limesharp\Import\Cron\Paths;
+     * @var \Claudiucreanga\Import\Cron\Paths;
      */
     protected $paths;
         
@@ -85,7 +85,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
     }
     
     /**
-     * @test Limesharp\Import\Cron\Paths::getVarFolderPath()
+     * @test Claudiucreanga\Import\Cron\Paths::getVarFolderPath()
      */
     public function testGetVarFolderPath()
     {
@@ -93,7 +93,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
     }
 
 	/**
-	 * @test Limesharp\Import\Cron\Paths::getIntegrationDirectory()
+	 * @test Claudiucreanga\Import\Cron\Paths::getIntegrationDirectory()
 	 */
 	public function testGetIntegrationDirectory()
 	{
@@ -101,7 +101,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
 	}
 
 	/**
-     * @test Limesharp\Import\Cron\Paths::getProductsProcessedDirectory()
+     * @test Claudiucreanga\Import\Cron\Paths::getProductsProcessedDirectory()
      */
     public function testGetProductsProcessedDirectory()
     {
@@ -109,7 +109,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test Limesharp\Import\Cron\Paths::getProductsProcessedDirectory()
+     * @test Claudiucreanga\Import\Cron\Paths::getProductsProcessedDirectory()
      */
     public function testGetProductsProcessingDirectory()
     {
@@ -117,7 +117,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
     }
 
 	/**
-     * @test Limesharp\Import\Cron\Paths::getStockProcessedDirectory()
+     * @test Claudiucreanga\Import\Cron\Paths::getStockProcessedDirectory()
      */
     public function testGetStockProcessedDirectory()
     {
@@ -125,7 +125,7 @@ class PathsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @test Limesharp\Import\Cron\Paths::getStockProcessedDirectory()
+     * @test Claudiucreanga\Import\Cron\Paths::getStockProcessedDirectory()
      */
     public function testGetStockProcessingDirectory()
     {

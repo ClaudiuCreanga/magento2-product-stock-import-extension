@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,16 +9,16 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
 declare(strict_types=1);
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -27,13 +27,13 @@ declare(strict_types=1);
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
  * @copyright 2016 Claudiu Creanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
-namespace Limesharp\Import\Model\ResourceModel\Stores;
+namespace Claudiucreanga\Import\Model\ResourceModel\Stores;
 
 use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
@@ -43,8 +43,8 @@ use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Store\Model\Store;
 use Magento\Store\Model\StoreManagerInterface;
 use Psr\Log\LoggerInterface;
-use Limesharp\Import\Model\Products;
-use Limesharp\Import\Model\ResourceModel\Products as ProductsResourceModel;
+use Claudiucreanga\Import\Model\Products;
+use Claudiucreanga\Import\Model\ResourceModel\Products as ProductsResourceModel;
 
 class Collection extends AbstractCollection
 {
@@ -57,7 +57,7 @@ class Collection extends AbstractCollection
      *
      * @var string
      */
-    public $_eventPrefix = 'limesharp_import_products_collection';
+    public $_eventPrefix = 'claudiucreanga_import_products_collection';
 
     /**
      * Event object

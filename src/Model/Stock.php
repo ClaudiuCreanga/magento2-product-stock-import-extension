@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,14 +9,14 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Model;
+namespace Claudiucreanga\Import\Model;
 
 use Magento\Framework\Data\Collection\AbstractDb;
 use Magento\Framework\Data\Collection\Db;
@@ -26,8 +26,8 @@ use Magento\Framework\Model\AbstractModel;
 use Magento\Framework\Model\Context;
 use Magento\Framework\Model\ResourceModel\AbstractResource;
 use Magento\Framework\Registry;
-use Limesharp\Import\Model\ResourceModel\Stock as ModelStock;
-use Limesharp\Import\Model\Source\AbstractSource;
+use Claudiucreanga\Import\Model\ResourceModel\Stock as ModelStock;
+use Claudiucreanga\Import\Model\Source\AbstractSource;
 
 class Stock extends AbstractModel
 {
@@ -46,7 +46,7 @@ class Stock extends AbstractModel
 	 *
 	 * @var string
 	 */
-	const CACHE_TAG = 'limesharp_import_integration_stock';
+	const CACHE_TAG = 'claudiucreanga_import_integration_stock';
 
 	/**
 	 * filter model

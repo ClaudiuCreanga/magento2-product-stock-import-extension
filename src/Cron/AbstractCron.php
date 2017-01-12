@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,63 +9,63 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Cron;
+namespace Claudiucreanga\Import\Cron;
 
 use Braintree\Exception;
 use Magento\Store\Model\ScopeInterface;
 use Magento\Backend\Block\Template\Context;
-use Limesharp\Import\Logger\Logger;
+use Claudiucreanga\Import\Logger\Logger;
 use Magento\Config\Model\ResourceModel\Config;
 
 /**
  * Class AbstractCron
- * @package Limesharp\Import\Cron
+ * @package Claudiucreanga\Import\Cron
  */
 abstract class AbstractCron
 {
     /**
      *
      */
-    const STATUS_CONFIG_PATH = "limesharp_import/import_general/status";
+    const STATUS_CONFIG_PATH = "claudiucreanga_import/import_general/status";
     /**
      *
      */
-    const EMAIL_ALERTS_CONFIG_PATH = "limesharp_import/import_general/email_alerts";
+    const EMAIL_ALERTS_CONFIG_PATH = "claudiucreanga_import/import_general/email_alerts";
     /**
      *
      */
-    const EMAIL_ADDRESSES_CONFIG_PATH = "limesharp_import/import_general/email_addresses";
+    const EMAIL_ADDRESSES_CONFIG_PATH = "claudiucreanga_import/import_general/email_addresses";
     /**
      *
      */
-    const PRODUCTS_TIMEOUT_CONFIG_PATH = "limesharp_import/import_products/timeout";
+    const PRODUCTS_TIMEOUT_CONFIG_PATH = "claudiucreanga_import/import_products/timeout";
     /**
      *
      */
-    const PRODUCTS_LAST_TIME_CONFIG_PATH = "limesharp_import/import_products/last_time";
+    const PRODUCTS_LAST_TIME_CONFIG_PATH = "claudiucreanga_import/import_products/last_time";
     /**
      *
      */
-    const PRODUCTS_EMAIL_TIME_CONFIG_PATH = "limesharp_import/import_products/email_time";
+    const PRODUCTS_EMAIL_TIME_CONFIG_PATH = "claudiucreanga_import/import_products/email_time";
     /**
      *
      */
-    const STOCK_TIMEOUT_CONFIG_PATH = "limesharp_import/import_stock/timeout";
+    const STOCK_TIMEOUT_CONFIG_PATH = "claudiucreanga_import/import_stock/timeout";
     /**
      *
      */
-    const STOCK_LAST_TIME_CONFIG_PATH = "limesharp_import/import_stock/last_time";
+    const STOCK_LAST_TIME_CONFIG_PATH = "claudiucreanga_import/import_stock/last_time";
     /**
      *
      */
-    const STOCK_EMAIL_TIME_CONFIG_PATH = "limesharp_import/import_stock/email_time";
+    const STOCK_EMAIL_TIME_CONFIG_PATH = "claudiucreanga_import/import_stock/email_time";
     /**
      *
      */

@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,14 +10,14 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Setup;
+namespace Claudiucreanga\Import\Setup;
 
 use Magento\Framework\DB\Ddl\Table;
 use Magento\Framework\DB\Adapter\AdapterInterface;
@@ -41,9 +41,9 @@ class InstallSchema implements InstallSchemaInterface
 	{
 		$installer = $setup;
 		$installer->startSetup();
-		if (!$installer->tableExists('limesharp_import_integration_products')) {
+		if (!$installer->tableExists('claudiucreanga_import_integration_products')) {
 			$table = $installer->getConnection()
-				->newTable($installer->getTable('limesharp_import_integration_products'));
+				->newTable($installer->getTable('claudiucreanga_import_integration_products'));
 			$table->addColumn(
 				'file_id',
 				Table::TYPE_INTEGER,
@@ -102,9 +102,9 @@ class InstallSchema implements InstallSchemaInterface
 			$installer->getConnection()->createTable($table);
 
 			$installer->getConnection()->addIndex(
-				$installer->getTable('limesharp_import_integration_products'),
+				$installer->getTable('claudiucreanga_import_integration_products'),
 				$setup->getIdxName(
-					$installer->getTable('limesharp_import_integration_products'),
+					$installer->getTable('claudiucreanga_import_integration_products'),
 					['name'],
 					AdapterInterface::INDEX_TYPE_FULLTEXT
 				),
@@ -115,9 +115,9 @@ class InstallSchema implements InstallSchemaInterface
 				AdapterInterface::INDEX_TYPE_FULLTEXT
 			);
 
-			if (!$installer->tableExists('limesharp_import_integration_stock')) {
+			if (!$installer->tableExists('claudiucreanga_import_integration_stock')) {
 				$table = $installer->getConnection()
-					->newTable($installer->getTable('limesharp_import_integration_stock'));
+					->newTable($installer->getTable('claudiucreanga_import_integration_stock'));
 				$table->addColumn(
 					'file_id',
 					Table::TYPE_INTEGER,
@@ -176,9 +176,9 @@ class InstallSchema implements InstallSchemaInterface
 				$installer->getConnection()->createTable($table);
 
 				$installer->getConnection()->addIndex(
-					$installer->getTable('limesharp_import_integration_stock'),
+					$installer->getTable('claudiucreanga_import_integration_stock'),
 					$setup->getIdxName(
-						$installer->getTable('limesharp_import_integration_stock'),
+						$installer->getTable('claudiucreanga_import_integration_stock'),
 						['name'],
 						AdapterInterface::INDEX_TYPE_FULLTEXT
 					),

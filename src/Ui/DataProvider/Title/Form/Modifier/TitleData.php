@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -11,22 +11,22 @@ declare(strict_types=1);
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
  * @copyright 2016 Claudiu Creanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Ui\DataProvider\Import\Form\Modifier;
+namespace Claudiucreanga\Import\Ui\DataProvider\Import\Form\Modifier;
 
 use Magento\Ui\DataProvider\Modifier\ModifierInterface;
-use Limesharp\Import\Model\ResourceModel\Products\CollectionFactory as FileFactory;
+use Claudiucreanga\Import\Model\ResourceModel\Products\CollectionFactory as FileFactory;
 
 class ImportData implements ModifierInterface
 {
     /**
-     * @var \Limesharp\Import\Model\ResourceModel\Products\Collection
+     * @var \Claudiucreanga\Import\Model\ResourceModel\Products\Collection
      */
     public $collection;
 

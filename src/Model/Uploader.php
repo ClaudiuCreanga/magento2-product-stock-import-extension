@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,14 +9,14 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Model;
+namespace Claudiucreanga\Import\Model;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 use Magento\Framework\Exception\LocalizedException;
@@ -32,19 +32,19 @@ class Uploader
     /**
      * @var string
      */
-    const IMAGE_TMP_PATH    = 'limesharp_import/tmp/import/image';
+    const IMAGE_TMP_PATH    = 'claudiucreanga_import/tmp/import/image';
     /**
      * @var string
      */
-    const IMAGE_PATH        = 'limesharp_import/import/image';
+    const IMAGE_PATH        = 'claudiucreanga_import/import/image';
     /**
      * @var string
      */
-    const FILE_TMP_PATH     = 'limesharp_import/tmp/import/file';
+    const FILE_TMP_PATH     = 'claudiucreanga_import/tmp/import/file';
     /**
      * @var string
      */
-    const FILE_PATH         = 'limesharp_import/import/file';
+    const FILE_PATH         = 'claudiucreanga_import/import/file';
 
     /**
      * Core file storage database

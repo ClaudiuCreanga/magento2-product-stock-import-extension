@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!--
-  ~ Limesharp_Import extension
+  ~ Claudiucreanga_Import extension
   ~
   ~ NOTICE OF LICENSE
   ~
@@ -9,9 +9,9 @@
   ~ It is also available through the world-wide-web at this URL:
   ~ http://opensource.org/licenses/mit-license.php
   ~
-  ~ @category  Limesharp
-  ~ @package   Limesharp_Import
-  ~ @copyright 2016 Limesharp
+  ~ @category  Claudiucreanga
+  ~ @package   Claudiucreanga_Import
+  ~ @copyright 2016 Claudiucreanga
   ~ @license   http://opensource.org/licenses/mit-license.php MIT License
   ~ @author    Claudiu Creanga
   -->
@@ -21,7 +21,7 @@
     </head>
     <body>
         <referenceContainer name="content">
-            <uiComponent name="limesharp_import_products_import_form"/>
+            <uiComponent name="claudiucreanga_import_products_import_form"/>
         </referenceContainer>
     </body>
 </page>

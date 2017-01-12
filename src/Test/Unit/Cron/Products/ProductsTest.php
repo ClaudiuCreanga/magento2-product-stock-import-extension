@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,24 +9,24 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Test\Unit\Model;
+namespace Claudiucreanga\Import\Test\Unit\Model;
 
 
-use Limesharp\Import\Cron\FieldsHeader;
-use Limesharp\Import\Cron\Products\ProcessProducts;
-use Limesharp\Import\Cron\Products\Products;
-use Limesharp\Import\Cron\Paths;
-use Limesharp\Import\Logger\Logger;
+use Claudiucreanga\Import\Cron\FieldsHeader;
+use Claudiucreanga\Import\Cron\Products\ProcessProducts;
+use Claudiucreanga\Import\Cron\Products\Products;
+use Claudiucreanga\Import\Cron\Paths;
+use Claudiucreanga\Import\Logger\Logger;
 use Magento\Backend\Block\Template\Context;
 use Magento\Config\Model\ResourceModel\Config;
-use Limesharp\Import\Model\ProductsFactory as FileFactory;
+use Claudiucreanga\Import\Model\ProductsFactory as FileFactory;
 
 class ProductsTest extends \PHPUnit_Framework_TestCase
 {

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,8 +10,8 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
  * @copyright 2016 Claudiu Creanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
@@ -19,13 +19,13 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="limesharp_import" sortOrder="2000">
+        <tab id="claudiucreanga_import" sortOrder="2000">
             <label>Import integration</label>
         </tab>
-        <section id="limesharp_import" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="claudiucreanga_import" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Import integration</label>
-            <tab>limesharp_import</tab>
-            <resource>Limesharp_Import::stores</resource>
+            <tab>claudiucreanga_import</tab>
+            <resource>Claudiucreanga_Import::stores</resource>
             <group id="import_general" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
                 <field id="status" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">

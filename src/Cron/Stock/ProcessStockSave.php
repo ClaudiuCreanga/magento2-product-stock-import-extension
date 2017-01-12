@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,23 +9,23 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Cron\Stock;
+namespace Claudiucreanga\Import\Cron\Stock;
 
-use Limesharp\Import\Cron\AbstractCron;
+use Claudiucreanga\Import\Cron\AbstractCron;
 use Magento\CatalogInventory\Api\Data\StockItemInterfaceFactory;
-use Limesharp\Import\Logger\Logger;
+use Claudiucreanga\Import\Logger\Logger;
 use Magento\Catalog\Model\ProductFactory;
 
 /**
  * Class ProcessStockSave
- * @package Limesharp\Import\Cron\Stock
+ * @package Claudiucreanga\Import\Cron\Stock
  */
 class ProcessStockSave extends AbstractCron
 {

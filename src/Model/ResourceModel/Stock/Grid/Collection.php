@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -10,18 +10,18 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Model\ResourceModel\Stock\Grid;
+namespace Claudiucreanga\Import\Model\ResourceModel\Stock\Grid;
 
 use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Search\AggregationInterface;
-use Limesharp\Import\Model\ResourceModel\Stock\Collection as StockCollection;
+use Claudiucreanga\Import\Model\ResourceModel\Stock\Collection as StockCollection;
 
 class Collection extends StockCollection implements SearchResultInterface
 {

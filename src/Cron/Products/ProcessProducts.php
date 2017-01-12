@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,28 +9,28 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Cron\Products;
+namespace Claudiucreanga\Import\Cron\Products;
 
 use Braintree\Exception;
 use Magento\Catalog\Model\ProductFactory;
 use Magento\Store\Model\StoreManagerInterface;
 use Magento\UrlRewrite\Model\UrlFinderInterface;
-use Limesharp\Import\Logger\Logger;
+use Claudiucreanga\Import\Logger\Logger;
 use Magento\Catalog\Api\Data\ProductLinkInterfaceFactory;
 use Magento\UrlRewrite\Service\V1\Data\UrlRewrite as UrlRewriteService;
 use Magento\UrlRewrite\Model\UrlRewrite as BaseUrlRewrite;
-use Limesharp\Import\Cron\AbstractCron;
+use Claudiucreanga\Import\Cron\AbstractCron;
 
 /**
  * Class ProcessProducts
- * @package Limesharp\Import\Cron\Products
+ * @package Claudiucreanga\Import\Cron\Products
  */
 class ProcessProducts extends AbstractCron
 {

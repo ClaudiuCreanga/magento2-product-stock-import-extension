@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
     <group id="default">
-        <job name="import_products" instance="Limesharp\Import\Cron\Products\Products" method="execute">
+        <job name="import_products" instance="Claudiucreanga\Import\Cron\Products\Products" method="execute">
             <schedule>30 * * * *</schedule>
         </job>
-        <job name="import_stock" instance="Limesharp\Import\Cron\Stock\Stock" method="execute">
+        <job name="import_stock" instance="Claudiucreanga\Import\Cron\Stock\Stock" method="execute">
             <schedule>15 * * * *</schedule>
         </job>
     </group>

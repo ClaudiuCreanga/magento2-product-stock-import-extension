@@ -1,6 +1,6 @@
 <?php
 /**
- * Limesharp_Import extension
+ * Claudiucreanga_Import extension
  *
  * NOTICE OF LICENSE
  *
@@ -9,14 +9,14 @@
  * It is also available through the world-wide-web at this URL:
  * http://opensource.org/licenses/mit-license.php
  *
- * @category  Limesharp
- * @package   Limesharp_Import
- * @copyright 2016 Limesharp
+ * @category  Claudiucreanga
+ * @package   Claudiucreanga_Import
+ * @copyright 2016 Claudiucreanga
  * @license   http://opensource.org/licenses/mit-license.php MIT License
  * @author    Claudiu Creanga
  */
 
-namespace Limesharp\Import\Setup;
+namespace Claudiucreanga\Import\Setup;
 
 use Magento\Framework\Model\AbstractModel;
 use Magento\Framework\Setup\ModuleContextInterface;
@@ -56,15 +56,15 @@ class Uninstall implements UninstallInterface
 		// @codingStandardsIgnoreEnd
 	{
 		//remove tables
-		if ($setup->tableExists('limesharp_import_integration_products')) {
-			$setup->getConnection()->dropTable('limesharp_import_integration_products');
+		if ($setup->tableExists('claudiucreanga_import_integration_products')) {
+			$setup->getConnection()->dropTable('claudiucreanga_import_integration_products');
 		}
-		if ($setup->tableExists('limesharp_import_integration_stock')) {
-			$setup->getConnection()->dropTable('limesharp_import_integration_stock');
+		if ($setup->tableExists('claudiucreanga_import_integration_stock')) {
+			$setup->getConnection()->dropTable('claudiucreanga_import_integration_stock');
 		}
 		//remove config settings if any
 		$collection = $this->collectionFactory->create()
-			->addPathFilter('limesharp_import');
+			->addPathFilter('claudiucreanga_import');
 		foreach ($collection as $config) {
 			$this->deleteConfig($config);
 		}
