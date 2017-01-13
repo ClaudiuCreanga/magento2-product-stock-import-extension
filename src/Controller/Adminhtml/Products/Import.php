@@ -32,7 +32,7 @@ class Import extends AbstractImportIntegration
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Claudiucreanga_Import::import');
-        $resultPage->getConfig()->getImport()->prepend(__('Import'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Import'));
         $resultPage->addBreadcrumb(__('Import'), __('Import'), $this->getUrl('importintegration/import'));
 
         return $resultPage;

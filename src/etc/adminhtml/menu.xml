@@ -20,13 +20,13 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
         <add id="Claudiucreanga_Import"
-                import="Import Integration"
+                title="Import Integration"
                 module="Claudiucreanga_Import"
                 sortOrder="9999"
                 resource="Magento_Backend::content"
         />
         <add id="Claudiucreanga_Import::products_files"
-                import="Products"
+                title="Products"
                 module="Claudiucreanga_Import"
                 sortOrder="9999"
                 resource="Magento_Backend::content"
@@ -34,7 +34,7 @@
                 action="importintegration/products"
         />
         <add id="Claudiucreanga_Import::stock_files"
-                import="Stock"
+                title="Stock"
                 module="Claudiucreanga_Import"
                 sortOrder="9999"
                 resource="Magento_Backend::content"
@@ -42,7 +42,7 @@
                 action="importintegration/stock"
         />
         <add id="Claudiucreanga_Import::import"
-                import="Import manually"
+                title="Import manually"
                 module="Claudiucreanga_Import"
                 sortOrder="9999"
                 resource="Magento_Backend::content"

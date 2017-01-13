@@ -32,7 +32,7 @@ class Index extends AbstractImportIntegration
         /** @var \Magento\Backend\Model\View\Result\Page $resultPage */
         $resultPage = $this->resultPageFactory->create();
         $resultPage->setActiveMenu('Claudiucreanga_Import::products_files');
-        $resultPage->getConfig()->getImport()->prepend(__('Product files that run'));
+        $resultPage->getConfig()->getTitle()->prepend(__('Product files that run'));
         $resultPage->addBreadcrumb(__('Import Integration'), __('Import Integration'));
         return $resultPage;
     }
