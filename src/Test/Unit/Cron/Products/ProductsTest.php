@@ -19,7 +19,6 @@
 namespace Claudiucreanga\Import\Test\Unit\Model;
 
 
-use Claudiucreanga\Import\Cron\FieldsHeader;
 use Claudiucreanga\Import\Cron\Products\ProcessProducts;
 use Claudiucreanga\Import\Cron\Products\Products;
 use Claudiucreanga\Import\Cron\Paths;
@@ -52,11 +51,6 @@ class ProductsTest extends \PHPUnit_Framework_TestCase
         $pathsMock->expects($this->once())
             ->method("getIntegrationDirectory")
             ->willReturn("/magento2/var/import_integration");
-
-        /** @var \PHPUnit_Framework_MockObject_MockObject|FieldsHeader $fieldsHeader */
-        $fieldsHeaderMock = $this->getMockBuilder(FieldsHeader::class)
-            ->disableOriginalConstructor()
-            ->getMock();
 
         /** @var \PHPUnit_Framework_MockObject_MockObject|ProcessProducts $processProducts */
         $processProductsMock = $this->getMockBuilder(ProcessProducts::class)

@@ -19,7 +19,6 @@
 namespace Claudiucreanga\Import\Cron\Stock;
 
 use Claudiucreanga\Import\Cron\Paths;
-use Claudiucreanga\Import\Cron\FieldsHeader;
 use Claudiucreanga\Import\Cron\Stock\ProcessStockSave;
 use Claudiucreanga\Import\Logger\Logger;
 use Claudiucreanga\Import\Cron\AbstractCron;
@@ -50,10 +49,6 @@ class Stock extends AbstractCron
     public $processingFiles;
 
     /**
-     * @var \Claudiucreanga\Import\Cron\Stock\ProcessStockDatabase
-     */
-    public $processStockDatabase;
-    /**
      * @var \Claudiucreanga\Import\Cron\Stock\ProcessStockSave
      */
     public $processStockSave;
@@ -64,7 +59,7 @@ class Stock extends AbstractCron
     public $logger;
 
     /**
-     * @var CollectionFactory
+     * @var StockFactory
      */
     public $fileFactory;
 

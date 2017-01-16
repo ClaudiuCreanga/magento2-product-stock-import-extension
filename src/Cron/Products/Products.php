@@ -20,7 +20,6 @@ declare(strict_types=1);
 namespace Claudiucreanga\Import\Cron\Products;
 
 use Claudiucreanga\Import\Cron\Paths;
-use Claudiucreanga\Import\Cron\FieldsHeader;
 use Claudiucreanga\Import\Cron\Products\ProcessProducts;
 use Claudiucreanga\Import\Logger\Logger;
 use Claudiucreanga\Import\Cron\AbstractCron;
@@ -39,11 +38,6 @@ class Products extends AbstractCron
      * @var Paths
      */
     public $paths;
-
-    /**
-     * @var FieldsHeader
-     */
-    public $fieldsHeader;
 
     /**
      * @var array $files Array of files to run
@@ -66,6 +60,11 @@ class Products extends AbstractCron
     public $logger;
 
     /**
+     * @var array
+     */
+    public $fieldsHeader;
+
+    /**
      * @var CollectionFactory
      */
     public $fileFactory;
@@ -85,14 +84,12 @@ class Products extends AbstractCron
         Context $context,
         Logger $logger,
         Paths $paths,
-        FieldsHeader $fieldsHeader,
         ProcessProducts $processProducts,
         Config $resourceConfig,
         FileFactory $fileFactory,
         array $data = []
     ) {
         $this->paths = $paths;
-        $this->fieldsHeader = $fieldsHeader;
         $this->processProducts = $processProducts;
         $this->logger = $logger;
         $this->fileFactory = $fileFactory;
@@ -158,7 +155,7 @@ class Products extends AbstractCron
             // multiple files processing in the same time if one file takes longer
             // don't do it if $rename is false (when it is run manually via the admin)
             if ($rename) {
-                rename($file, $this->paths->getProductsProcessingDirectory() . "/" . basename($file));
+                //rename($file, $this->paths->getProductsProcessingDirectory() . "/" . basename($file));
             }
 
             $row = 0;
@@ -169,19 +166,14 @@ class Products extends AbstractCron
                     continue;
                 }
 
-                #skip headers
+                #set headers
                 if ($row === 0) {
+                    $this->setFieldsHeader($data);
                     $row++;
                     continue;
                 }
-                if (count($this->fieldsHeader->getFieldsHeader()) != count($data)) {
-                    $this->logger->info('Product file incorrectly formated (different number of columns) '.$file);
-                    $this->setErrors(['Product file incorrectly formated (different number of columns) '.$file]);
-                    $this->updateTableWithFileInformation($fileFactory, $file);
-                    continue;
-                }
 
-                $productInformationWithheaders = array_combine($this->fieldsHeader->getFieldsHeader(), $data);
+                $productInformationWithheaders = array_combine($this->getFieldsHeader(), $data);
                 $this->processProducts->manageTypeOfProducts($productInformationWithheaders, $row);
 
                 $row++;
@@ -189,10 +181,10 @@ class Products extends AbstractCron
 
             // place it in the processed directory afterwards
             if ($rename) {
-                rename(
-                    $this->paths->getProductsProcessingDirectory() . "/" . basename($file),
-                    $this->paths->getProductsProcessedDirectory() . "/" . basename($file)
-                );
+//                rename(
+//                    $this->paths->getProductsProcessingDirectory() . "/" . basename($file),
+//                    $this->paths->getProductsProcessedDirectory() . "/" . basename($file)
+//                );
             } else {
                 $this->setErrors('File uploaded manually, cannot be rerun or viewed. ');
             }
@@ -254,4 +246,19 @@ class Products extends AbstractCron
         $this->setProcessingFiles($allFilesInProcessingFolder);
     }
 
+    /**
+     * @return array
+     */
+    public function getFieldsHeader()
+    {
+        return $this->fieldsHeader;
+    }
+
+    /**
+     * @param array $fieldsHeader
+     */
+    public function setFieldsHeader($fieldsHeader)
+    {
+        $this->fieldsHeader = $fieldsHeader;
+    }
 }
